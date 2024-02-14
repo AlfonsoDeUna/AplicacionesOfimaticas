@@ -39,7 +39,7 @@ im = Image.composite(im1, im2, mask)
 A partir del código de ejemplo anterior, vamos a crear un efecto de difuminado en la máscara
 con **ImageFilter**
 
-````python
+```python
 mask_blur = mask.filter(ImageFilter.GaussianBlur(10))
 im = Image.composite(im1, im2, mask_blur)
 ```
