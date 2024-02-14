@@ -71,21 +71,25 @@ def get_gradient_3d(width, height, start_list, stop_list, is_horizontal_list):
 
 array = get_gradient_3d(512, 256, (0, 0, 0), (255, 255, 255), (True, True, True))
 Image.fromarray(np.uint8(array)).save('data/dst/gray_gradient_h.jpg', quality=95)
+
 ```
 
-Ahora prueba los siguientes gradientes:
+### Ahora prueba los siguientes gradientes:
 
 ```python
 
 array = get_gradient_3d(512, 256, (0, 0, 0), (255, 255, 255), (False, False, False))
 Image.fromarray(np.uint8(array)).save('data/dst/gray_gradient_v.jpg', quality=95)
-```
-
-otro gradiente
 
 ```
+
+### otro gradiente
+
+```python
+
 array = get_gradient_3d(512, 256, (0, 0, 192), (255, 255, 64), (True, False, False))
 Image.fromarray(np.uint8(array)).save('data/dst/color_gradient.jpg', quality=95)
+
 ```
 ---
 # Ejercicio crea varios gradientes en Grey 'L' y RGB
