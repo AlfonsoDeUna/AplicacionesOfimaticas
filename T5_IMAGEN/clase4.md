@@ -80,7 +80,6 @@ Image.fromarray(np.uint8(array)).save('data/dst/gray_gradient_h.jpg', quality=95
 
 array = get_gradient_3d(512, 256, (0, 0, 0), (255, 255, 255), (False, False, False))
 Image.fromarray(np.uint8(array)).save('data/dst/gray_gradient_v.jpg', quality=95)
-
 ```
 
 ### otro gradiente
