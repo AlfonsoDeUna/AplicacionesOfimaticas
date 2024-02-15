@@ -84,7 +84,7 @@ img.putdata(new_image)
 img.save("flower_image_altered.jpg")
 ```
 ---
-# Ejercicio
+# Ejercicio: Cambia colores de 3 imágenes. Busca que color quieres modificar y cambialo por otro
 ---
 
 ## Crear texto dentro de imágenes
@@ -97,6 +97,7 @@ img.save("flower_image_altered.jpg")
     draw.text((10, 10), "Hello from")
     draw.text((10, 25), "Pillow",)
 ```
+
 
 #### Ejemplo 2
 
@@ -112,6 +113,10 @@ Fuente: https://github.com/larsenwork/Gidole
         draw.text((10, y), f"Chihuly Exhibit ({font_size=}", font=font)
         y += 35
 ```
+
+---
+# Ejercicio: Añade texto a imágenes en plan titulares de prensa
+---
 
 ## Crear rectángulos
 
@@ -144,3 +149,9 @@ def line(image_path, output_path):
 
     image.save(output_path)
 ```
+---
+# Ejercicio: Cree una imagen compuesta de dibujos
+---
+---
+# Ejercicio: Añade formas a dibujos
+---
