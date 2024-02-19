@@ -87,3 +87,30 @@ imagen.close()
 nueva_imagen.close()
 
 ```
+
+## FILTROS LAPLACE
+
+``` python
+
+from PIL import Image, ImageFilter
+ 
+    tamaño = (5,5)
+     
+    coeficientes = [0, 0, -1, 0, 0, 0, -1, -2, -1, 0, -1, -2, , 16, -2, -1, 0, -1, -2, -1, 0, 0, 0, -1, 0, 0]
+     
+    factor = 1
+     
+    imagen_original = Image.open('ruta_y_nombre_del_archivo')
+     
+    imagen_procesada = imagen_original.filter(ImageFilter.Kernel(tamaño, coeficientes, factor))
+     
+    #se graba el resultado
+     
+    imagen_procesada.save('ruta_y_nombre_del_archivo')
+     
+    #se cierran ambos objetos creados de la clase Image
+     
+    imagen_original.close()
+     
+    imagen_procesada.close()
+```
