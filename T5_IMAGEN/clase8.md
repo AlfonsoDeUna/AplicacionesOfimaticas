@@ -1,6 +1,6 @@
 # Segmentación y Superposición
 
-## 1. Preparar las imágenes
+## 1. Preparar las imágenes y crear el python8_1.py
 
 Escenario y Gato
 
