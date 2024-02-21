@@ -147,4 +147,49 @@ Prueba esto...
 step_2 = dilate(58, step_1)
 step_2.show()
 
+```
 
+
+¿Cómo lo ves?
+
+Prueba ahora esto...
+
+```python
+
+cat_mask = erode(45, step_2)
+cat_mask.show()
+
+```
+
+### Necesitamos realizar un filtro de difuminado
+
+```python
+
+cat_mask = cat_mask.convert("L")
+cat_mask = cat_mask.filter(ImageFilter.BoxBlur(20))
+cat_mask.show()
+
+```
+
+### Extraer la figura con la máscara
+
+``` python
+
+blank = img_cat.point(lambda _: 0)
+cat_segmented = Image.composite(img_cat, blank, cat_mask)
+cat_segmented.show()
+
+```
+
+### Una vez extraida la imagen la pegamos al fondo
+
+``` python
+
+filename_monastery = "fondo.jpg"
+
+with Image.open(filename_monastery) as img_monastery:
+    img_monastery.load()
+    img_monastery.paste(img_cat.resize((img_cat.width // 5, img_cat.height // 5)),(1300, 750), cat_mask.resize((cat_mask.width // 5, cat_mask.height // 5)),)
+    img_monastery.show()
+
+```
