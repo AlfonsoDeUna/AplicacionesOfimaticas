@@ -48,7 +48,7 @@ blue.show()
 
 Seleccionamos el canal con mayor contraste para realizar otra segmentación para ya quedarnos con la figura del gatuno
 
-```
+```python
 threshold = 57
 img_cat_threshold = blue.point(lambda x: 255 if x > threshold else 0)
 img_cat_threshold = img_cat_threshold.convert("1")
@@ -107,7 +107,7 @@ with Image.open(filename) as img:
 
 ### Añade estas dos funciones al primer python para utilizarlas con el Michi
 
-*Nota: Explicar los métodos en python*
+*Nota: Explicar los métodos en python y añadir ImageFilter al import*
 
 ```python
 
